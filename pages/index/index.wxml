@@ -1,0 +1,71 @@
+<searchbar isnavigator="{{true}}"></searchbar>
+<view class="module-group">
+  <!-- 头部 -->
+  <view class="module-top">
+    <view class="module-title">电影</view>
+    <navigator class="module-more">更多</navigator>
+  </view>
+  <!-- 滚动框 -->
+  <scroll-view class="module-scroll-view" scroll-x="{{true}}">
+    <!-- 其中一个item -->
+    <navigator class="item-navigator">
+      <view class="item-group">
+        <view class="thumnail-group">
+          <image class="thumnail" src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2601128944.jpg"></image>
+        </view>
+        <view class="item-title">列夫·朗道：诺拉与母亲</view>
+        <!-- 评分 -->
+        <stars rate="7.5"></stars>
+      </view>
+    </navigator>
+
+    <!-- 其中一个item -->
+    <navigator class="item-navigator">
+      <view class="item-group">
+        <view class="thumnail-group">
+          <image class="thumnail" src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2601128944.jpg"></image>
+        </view>
+        <view class="item-title">列夫·朗道：诺拉与母亲</view>
+        <!-- 评分 -->
+        <stars rate="0"></stars>
+      </view>
+    </navigator>
+
+    <!-- 其中一个item -->
+    <navigator class="item-navigator">
+      <view class="item-group">
+        <view class="thumnail-group">
+          <image class="thumnail" src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2601128944.jpg"></image>
+        </view>
+        <view class="item-title">列夫·朗道：诺拉与母亲</view>
+        <!-- 评分 -->
+        <stars rate="8"></stars>
+      </view>
+    </navigator>
+
+    <!-- 其中一个item -->
+    <navigator class="item-navigator">
+      <view class="item-group">
+        <view class="thumnail-group">
+          <image class="thumnail" src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2601128944.jpg"></image>
+        </view>
+        <view class="item-title">列夫·朗道：诺拉与母亲</view>
+        <!-- 评分 -->
+        <stars rate="7.5"></stars>
+      </view>
+    </navigator>
+
+    <!-- 其中一个item -->
+    <navigator class="item-navigator">
+      <view class="item-group">
+        <view class="thumnail-group">
+          <image class="thumnail" src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2601128944.jpg"></image>
+        </view>
+        <view class="item-title">列夫·朗道：诺拉与母亲</view>
+        <!-- 评分 -->
+        <stars rate="7.5"></stars>
+      </view>
+    </navigator>
+
+  </scroll-view>
+</view>
