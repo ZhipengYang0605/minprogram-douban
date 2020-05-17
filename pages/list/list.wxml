@@ -1,0 +1,6 @@
+<!-- 搜索框 -->
+<searchbar></searchbar>
+<!-- 更多 -->
+<view class="container"> 
+  <itemview wx:for="{{items}}" wx:key="*this" item="{{item}}"></itemview>
+</view>

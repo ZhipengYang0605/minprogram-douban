@@ -1,0 +1,11 @@
+  <view class="module-group">
+  <!-- 头部 -->
+  <view class="module-top">
+    <view class="module-title">{{title}}</view>
+    <navigator class="module-more" url="{{morelink}}">更多</navigator>
+  </view>
+  <!-- 滚动框-电影 -->
+  <scroll-view class="module-scroll-view" scroll-x="{{true}}">
+    <itemview wx:for="{{items}}" wx:key="*this" item="{{item}}"></itemview>
+  </scroll-view>
+  </view>

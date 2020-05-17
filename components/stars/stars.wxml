@@ -1,7 +1,7 @@
 <!-- 评分 -->
 <view class="rate-group">
-  <image wx:for="{{lights}}" src="/images/rate_light.png"></image>
-  <image wx:for="{{halfs}}" src="/images/rate_half.png"></image>
-  <image wx:for="{{grays}}" src="/images/rate_gray.png"></image>
+  <image wx:for="{{lights}}" wx:key="*this" src="/images/rate_light.png"></image>
+  <image wx:for="{{halfs}}" wx:key="*this" src="/images/rate_half.png"></image>
+  <image wx:for="{{grays}}" wx:key="*this" src="/images/rate_gray.png"></image>
   <text>{{ratetext}}</text>
 </view>

@@ -2,6 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/search/search",
+    "pages/list/list",
+    "components/indexmodule/indexmodule",
+    "components/itemview/itemview",
     "components/searchbar/searchbar",
     "components/stars/stars"
   ],
