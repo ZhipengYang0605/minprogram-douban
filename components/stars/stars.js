@@ -27,6 +27,10 @@ Component({
     fontcolor: {
       type: String,
       value: "#ccc"
+    },
+    isText: {
+      type: Boolean,
+      value: true
     }
   },
   /**

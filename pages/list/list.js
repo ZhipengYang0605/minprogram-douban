@@ -13,11 +13,16 @@ Page({
     let that = this;
     let type = options.type;
     let title = '';
+    // 若数据没有加载出来，显示正在加载
+    wx.showLoading({
+      title: '正在拼命加载！'
+    });
     if(type === 'movie'){
       // 请求电影数据(参数：callback/type/count)
       network.getMovieList({
-        success: function(res){
-          let items = res.data.subject_collection_items;
+        success: function(items){
+          // 数据加载成功隐藏正在加载
+          wx.hideLoading({});
           that.setData({
             items: items
           })
@@ -29,11 +34,12 @@ Page({
     } else if(type === 'tv'){
       // 请求电视剧数据
       network.getTvList({
-        success: function(res){
-          let items = res.data.subject_collection_items;
+        success: function(items){
+          // 数据加载成功隐藏正在加载
+          wx.hideLoading({});
           that.setData({
             items: items
-          })
+          });
         },
         type: type,
         count: 1000
@@ -42,11 +48,12 @@ Page({
     }else{
       // 请求综艺数据
       network.getShowList({
-        success: function(res){
-          let items = res.data.subject_collection_items;
+        success: function(items){
+          // 数据加载成功隐藏正在加载
+          wx.hideLoading({});
           that.setData({
             items: items
-          })
+          });
         },
         type: type,
         count: 1000

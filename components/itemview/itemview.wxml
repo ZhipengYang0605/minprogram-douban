@@ -1,4 +1,4 @@
-<navigator class="item-navigator">
+<navigator wx:if="{{item}}" class="item-navigator">
   <view class="item-group">
     <view class="thumnail-group">
       <image class="thumnail" src="{{item.cover.url}}"></image>
@@ -8,3 +8,4 @@
     <stars rate="{{item.rating.value}}"></stars>
   </view>
 </navigator>
+<navigator wx:else class="item-navigator"></navigator>

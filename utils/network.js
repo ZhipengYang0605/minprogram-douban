@@ -34,8 +34,13 @@ const network = {
         count: count
       },
       success: function(res){
+        let items = res.data.subject_collection_items;
+        // 解决首页点击更多，flex布局出现的问题
+        if(items.length % 3 == 2){
+          items.push(null);
+        }
         if(params && params.success){
-          params.success(res);
+          params.success(items);
         }
       }
     });

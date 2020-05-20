@@ -1,0 +1,73 @@
+<view class="item-header">
+  <view class="item-title">海王 Aquaman (2018)</view>
+  <view class="item-detail">
+    <view class="left-detail">
+      <view class="item-rate">
+        <stars rate="8" starsize="30" fontsize="30" fontcolor="#595959"></stars>
+        <text class="comment-persons">999999人评价</text>
+      </view>
+      <view class="item-sub-detail">
+        <view class="item-type">143分钟 动作/奇幻/冒险</view>
+      </view>
+      <view class="item-show">2018-12-07(中国大陆)上映 美国</view>
+      <view class="item-actors">
+        温子仁(导演) / 节省摩玛 / 艾梅伯希尔德/ 威廉大幅
+      </view>
+    </view>
+    <view class="right-detail">
+      <image src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2594916975.jpg"></image>
+    </view>
+  </view>
+</view>
+
+<view class="item-tags">
+    <view class="item-tags-title">豆瓣成员常用标签</view>
+    <view class="item-tags-list">
+      <text>黑色幽默</text>
+      <text>小人物</text>
+      <text>喜剧</text>
+      <text>人生</text>
+      <text>方言</text>
+      <text>中国大陆</text>
+      <text>剧情</text>
+    </view>
+  </view>
+
+<view class="comment-list-group">
+  <view class="comment-title">短评(888888)</view>
+  <view class="comment-group">
+    <view class="left-comment">
+      <image class="avatar" src="https://img9.doubanio.com/icon/u136640405-36.jpg"></image>
+    </view>
+    <view class="right-comment">
+      <view class="username-rate">
+        <text class="username">穷开心a</text>
+        <stars rate="7" isText="{{false}}" starsize="30"></stars>
+      </view>
+      <view class="release-time">2020-05-18 21:08:30</view>
+      <view class="content">
+        好可爱一姬片！青春校园物语，氛围上让人想起《爱你，西蒙》。重点是伍导怎么对中国女同性恋的状态拿捏得如此精准啊？！红格子衬衫、秋衣套T恤、一脸生人勿近姐只搞学习不搞你、对心动女生永远只挤眼绝不开口约、撩妹全靠拼学识、不爱见面爱网聊，网聊绝不发emoji因为要酷，每一项都活灵活现！！姬急跳墙张嘴就问“这是阔叶树吗”简直笑到我锤床。【这就是我在《爱你，西蒙》评论中谈到的想看到更多的那种LGBT青春片，不需要多么苦大仇深和曲高和寡，只是要补齐LGBT人群在青春校园这个最简单的电影类型中太久的“不在场”罢了。】
+      </view>
+    </view>
+  </view>
+
+  <view class="comment-group">
+    <view class="left-comment">
+      <image class="avatar" src="https://img9.doubanio.com/icon/u136640405-36.jpg"></image>
+    </view>
+    <view class="right-comment">
+      <view class="username-rate">
+        <text class="username">穷开心a</text>
+        <stars rate="7" isText="{{false}}" starsize="30"></stars>
+      </view>
+      <view class="release-time">2020-05-18 21:08:30</view>
+      <view class="content">
+        好可爱一姬片！青春校园物语，氛围上让人想起《爱你，西蒙》。重点是伍导怎么对中国女同性恋的状态拿捏得如此精准啊？！红格子衬衫、秋衣套T恤、一脸生人勿近姐只搞学习不搞你、对心动女生永远只挤眼绝不开口约、撩妹全靠拼学识、不爱见面爱网聊，网聊绝不发emoji因为要酷，每一项都活灵活现！！姬急跳墙张嘴就问“这是阔叶树吗”简直笑到我锤床。【这就是我在《爱你，西蒙》评论中谈到的想看到更多的那种LGBT青春片，不需要多么苦大仇深和曲高和寡，只是要补齐LGBT人群在青春校园这个最简单的电影类型中太久的“不在场”罢了。】
+      </view>
+    </view>
+  </view>
+</view>  
+
+
+<navigator class="more-comment">查看更多短评</navigator>
+
