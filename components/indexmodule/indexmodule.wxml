@@ -6,6 +6,6 @@
   </view>
   <!-- 滚动框-电影 -->
   <scroll-view class="module-scroll-view" scroll-x="{{true}}">
-    <itemview wx:for="{{items}}" wx:key="*this" item="{{item}}"></itemview>
+    <itemview wx:for="{{items}}" wx:key="*this" item="{{item}}" itemurl="/pages/detail/detail?type={{type}}&id={{item.id}}"></itemview>
   </scroll-view>
   </view>

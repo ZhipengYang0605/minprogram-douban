@@ -24,7 +24,8 @@ Page({
           // 数据加载成功隐藏正在加载
           wx.hideLoading({});
           that.setData({
-            items: items
+            items: items,
+            type: type
           })
         },
         type: type,
@@ -38,7 +39,8 @@ Page({
           // 数据加载成功隐藏正在加载
           wx.hideLoading({});
           that.setData({
-            items: items
+            items: items,
+            type: type
           });
         },
         type: type,
@@ -52,7 +54,8 @@ Page({
           // 数据加载成功隐藏正在加载
           wx.hideLoading({});
           that.setData({
-            items: items
+            items: items,
+            type: type
           });
         },
         type: type,

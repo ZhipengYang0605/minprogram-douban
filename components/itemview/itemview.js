@@ -11,6 +11,10 @@ Component({
     item: {
       type: Object,
       value: {}
+    },
+    itemurl: {
+      type: String,
+      value: ''
     }
   },
   /**

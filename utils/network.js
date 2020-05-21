@@ -16,6 +16,7 @@ const network = {
     this.getItemlist(params);
   },
   // 重构--传入的params包括count/type/callback
+  // 获取列表
   getItemlist: function(params){
     let count = params.count || 7;
     let type = params.type;
@@ -44,6 +45,31 @@ const network = {
         }
       }
     });
-  }
+  },
+
+  // 获取详情
+  getItemDetail: function (params) {
+    let id = params.id;
+    let type = params.type;
+    let url = '';
+    if(type === 'movie'){
+      url = globalUrls.movieDetail + id;
+    } else if(type === 'tv'){
+      url = globalUrls.tvDetail + id;
+    } else {
+      url = globalUrls.showDetail + id;
+    }
+    // 发起请求
+    wx.request({
+      url: url,
+      success: function (res){
+        let item = res.data;
+        if(params.callback) {
+          params.callback(item);
+        }
+      }
+    })
+  },
+
 }
 export {network}

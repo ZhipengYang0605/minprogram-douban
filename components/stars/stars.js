@@ -12,6 +12,10 @@ Component({
    * 组件属性
    */
   properties: {
+    // rate: {
+    //   type: Number,
+    //   value: 0
+    // },
     rate: {
       type: Number,
       value: 0

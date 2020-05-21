@@ -1,7 +1,7 @@
 <searchbar isnavigator="{{true}}"></searchbar>
 <!-- 电影 -->
-<indexmodule title="电影" items="{{movies}}" morelink="/pages/list/list?type=movie"></indexmodule>
+<indexmodule type="movie" title="电影" items="{{movies}}" morelink="/pages/list/list?type=movie"></indexmodule>
 <!-- 电视剧 -->
-<indexmodule title="电视剧" items="{{tvs}}" morelink="/pages/list/list?type=tv"></indexmodule>
+<indexmodule type="tv" title="电视剧" items="{{tvs}}" morelink="/pages/list/list?type=tv"></indexmodule>
 <!-- 综艺 -->
-<indexmodule title="综艺" items="{{shows}}" morelink="/pages/list/list?type=show"></indexmodule>
+<indexmodule type="show" title="综艺" items="{{shows}}" morelink="/pages/list/list?type=show"></indexmodule>

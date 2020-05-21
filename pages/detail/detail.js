@@ -1,4 +1,5 @@
 // pages/detail/detail.js
+import {network} from './../../utils/network'
 Page({
 
   /**
@@ -12,7 +13,32 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let that = this;
+    let type = options.type;
+    let id = options.id;
+    network.getItemDetail({
+      id: id,
+      type: type,
+      callback: function (item) {
+        console.log(item);
+        console.log(item.rating.value);
+        item.genres = item.genres.join('/');
+        // 拼接导演和演员列表
+        item.directors = item.directors[0].name;
+        let actorName = [];
+        item.actors.forEach(function(actor, index){
+          if(index < 3) {
+            actorName.push(actor.name);
+          }
+        });
+        item.actorName = actorName.join('/');
+        item.nameList = item.directors+ '(导演)' + '/' + item.actorName;
+        // 存储数据
+        that.setData({
+          item: item
+        });
+      }
+    });
   },
 
   /**
