@@ -5,9 +5,7 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {
-
-  },
+  data: {},
 
   /**
    * 生命周期函数--监听页面加载
@@ -16,12 +14,16 @@ Page({
     let that = this;
     let type = options.type;
     let id = options.id;
+    // 将type/id保存到data中
+    this.setData({
+      type: type,
+      id: id
+    })
+    // 获取详情数据
     network.getItemDetail({
       id: id,
       type: type,
       callback: function (item) {
-        console.log(item);
-        console.log(item.rating.value);
         item.genres = item.genres.join('/');
         // 拼接导演和演员列表
         item.directors = item.directors[0].name;
@@ -39,6 +41,29 @@ Page({
         });
       }
     });
+    // 获取标签数据
+    network.getItemTags({
+      type: type,
+      id: id,
+      callback: function(data){
+        that.setData({
+          tags: data
+        })
+      }
+    });
+    // 获取评论数据
+    network.getComments({
+      type: type,
+      id: id,
+      callback: function(data){
+        let count = data.total;
+        let comments = data.interests;
+        that.setData({
+          comments: comments,
+          count: count
+        })
+      }
+    })
   },
 
   /**
@@ -52,7 +77,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.pageScrollTo({
+      scrollTop:0
+    })
   },
 
   /**

@@ -70,6 +70,53 @@ const network = {
       }
     })
   },
-
+  // 获取标签
+  getItemTags: function(params){
+    let id = params.id;
+    let type = params.type;
+    let url = '';
+    if(type === 'movie'){
+      url = globalUrls.movieTags(id);
+    } else if (type==='tv') {
+      url = globalUrls.tvTags(id);
+    } else{
+      url = globalUrls.showTags(id);
+    }
+    // 发起请求
+    wx.request({
+      url: url,
+      success: function(res){
+        if(params.callback){
+          let data = res.data.tags;
+          params.callback(data);
+        }
+      }
+    })
+  },
+  // 获取评论数据
+  getComments: function(params){
+    let id = params.id;
+    let type = params.type;
+    let url = '';
+    let start = params.start || 0;
+    let count = params.count || 3;
+    if(type === 'movie'){
+      url = globalUrls.movieComments(id, start, count);
+    } else if (type==='tv') {
+      url = globalUrls.tvComments(id, start, count);
+    } else{
+      url = globalUrls.showComments(id, start, count);
+    }
+    // 发起请求
+    wx.request({
+      url: url,
+      success: function(res){
+        let data = res.data;
+        if(params.callback){
+          params.callback(data);
+        }
+      }
+    })
+  }
 }
 export {network}

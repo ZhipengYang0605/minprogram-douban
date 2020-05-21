@@ -4,21 +4,19 @@ Component({
   /**
    * 页面的初始数据
    */
-  data: {
-
-  },
+  data: {},
 
   /**
    * 组件属性
    */
   properties: {
-    // rate: {
-    //   type: Number,
-    //   value: 0
-    // },
     rate: {
       type: Number,
-      value: 0
+      value: 0,
+      // 监听属性改变
+      observer(newvalue, oldvalue, changepath){
+        this.updateRate();
+      }
     },
     starsize: {
       type: Number,
@@ -37,11 +35,8 @@ Component({
       value: true
     }
   },
-  /**
-   * 组件生命周期
-   */
-  lifetimes: {
-    attached: function(){
+  methods: {
+    updateRate: function(){
       // 获取评分
       let rate = this.properties.rate;
       let intRate = parseInt(rate);
@@ -69,7 +64,14 @@ Component({
         grays: grays,
         ratetext: ratetext
       })
-
+    }
+  },
+  /**
+   * 组件生命周期
+   */
+  lifetimes: {
+    attached: function(){
+      this.updateRate();
     }
   }
 })

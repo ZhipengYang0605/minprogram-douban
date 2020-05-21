@@ -23,51 +23,23 @@
 <view class="item-tags">
     <view class="item-tags-title">豆瓣成员常用标签</view>
     <view class="item-tags-list">
-      <text>黑色幽默</text>
-      <text>小人物</text>
-      <text>喜剧</text>
-      <text>人生</text>
-      <text>方言</text>
-      <text>中国大陆</text>
-      <text>剧情</text>
+      <text wx:for="{{tags}}" wx:key="*this">{{item}}</text>
     </view>
   </view>
-
+<!-- 评论部分 -->
 <view class="comment-list-group">
-  <view class="comment-title">短评(888888)</view>
-  <view class="comment-group">
-    <view class="left-comment">
-      <image class="avatar" src="https://img9.doubanio.com/icon/u136640405-36.jpg"></image>
-    </view>
-    <view class="right-comment">
-      <view class="username-rate">
-        <text class="username">穷开心a</text>
-        <stars rate="7" isText="{{false}}" starsize="30"></stars>
-      </view>
-      <view class="release-time">2020-05-18 21:08:30</view>
-      <view class="content">
-        好可爱一姬片！青春校园物语，氛围上让人想起《爱你，西蒙》。重点是伍导怎么对中国女同性恋的状态拿捏得如此精准啊？！红格子衬衫、秋衣套T恤、一脸生人勿近姐只搞学习不搞你、对心动女生永远只挤眼绝不开口约、撩妹全靠拼学识、不爱见面爱网聊，网聊绝不发emoji因为要酷，每一项都活灵活现！！姬急跳墙张嘴就问“这是阔叶树吗”简直笑到我锤床。【这就是我在《爱你，西蒙》评论中谈到的想看到更多的那种LGBT青春片，不需要多么苦大仇深和曲高和寡，只是要补齐LGBT人群在青春校园这个最简单的电影类型中太久的“不在场”罢了。】
-      </view>
-    </view>
-  </view>
-
-  <view class="comment-group">
-    <view class="left-comment">
-      <image class="avatar" src="https://img9.doubanio.com/icon/u136640405-36.jpg"></image>
-    </view>
-    <view class="right-comment">
-      <view class="username-rate">
-        <text class="username">穷开心a</text>
-        <stars rate="7" isText="{{false}}" starsize="30"></stars>
-      </view>
-      <view class="release-time">2020-05-18 21:08:30</view>
-      <view class="content">
-        好可爱一姬片！青春校园物语，氛围上让人想起《爱你，西蒙》。重点是伍导怎么对中国女同性恋的状态拿捏得如此精准啊？！红格子衬衫、秋衣套T恤、一脸生人勿近姐只搞学习不搞你、对心动女生永远只挤眼绝不开口约、撩妹全靠拼学识、不爱见面爱网聊，网聊绝不发emoji因为要酷，每一项都活灵活现！！姬急跳墙张嘴就问“这是阔叶树吗”简直笑到我锤床。【这就是我在《爱你，西蒙》评论中谈到的想看到更多的那种LGBT青春片，不需要多么苦大仇深和曲高和寡，只是要补齐LGBT人群在青春校园这个最简单的电影类型中太久的“不在场”罢了。】
-      </view>
-    </view>
-  </view>
+  <view class="comment-title">短评({{count}})</view>
+  <onecomment 
+    item="{{item}}"
+    wx:for="{{comments}}" wx:key="id"
+  ></onecomment>
 </view>  
 
-
-<navigator class="more-comment">查看更多短评</navigator>
+<navigator 
+  class="more-comment" 
+  url="/pages/comment/comment?id={{id}}&type={{type}}&coverimg={{item.cover.image.small.url}}&title={{item.title}}&rate={{item.rating.value}}&total={{item.rating.count}}"
+  hover-class="none"
+>
+  查看更多短评
+</navigator>
 
