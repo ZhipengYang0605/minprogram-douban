@@ -117,6 +117,23 @@ const network = {
         }
       }
     })
-  }
+  },
+  // 获取搜索结果
+  getSearchs: function(params){
+    let q = params.value;
+    let url = globalUrls.searchUrl(q);
+    console.log(url);
+    if(params.callback){
+      wx.request({
+        url: url,
+        success: function(res){
+          let data = res.data.subjects;
+          params.callback(data);
+        }
+      })
+    }
+  },
+
+
 }
 export {network}

@@ -27,5 +27,9 @@ const globalUrls = {
   showComments: function(id,start=0,count=3){
     return this.tvComments(id,start,count);
   },
+  // 搜索接口
+  searchUrl: function (q) {
+    return "https://m.douban.com/rexxar/api/v2/search?type=movie&q=" + q
+  }
 }
 export {globalUrls}
